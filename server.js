@@ -1,9 +1,9 @@
-var express = require('express');
+var app = require('express')();
 var cors = require('cors');
 var prezi = require('./prezi.js');
 
-var app = express();
 
+// Our API will be called from Mixmax, so we need to allow it explicitly for cross-origin requests
 var corsOptions = {
   origin: /^[^.\s]+\.mixmax\.com$/,
   credentials: true
